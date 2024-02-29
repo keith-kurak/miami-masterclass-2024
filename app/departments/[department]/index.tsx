@@ -25,29 +25,33 @@ export default function TabOneScreen() {
         data={query.data}
         keyExtractor={(item: any) => item.id}
         renderItem={({ item }) => (
-          <View className="flex-row bg-shade-1">
-            <View className="flex-1 justify-start">
-              <Text className="text-2xl font-semibold bg-shade-2 pl-4 py-2">
-                {item.title}
-              </Text>
-              <View className="my-2 mx-2">
-                <Text className="italic pl-4">{item.date_text}</Text>
-                {item.creators.length ? (
-                  <Text className="italic pl-4">
-                    {item.creators[0].description}
+          <Link asChild href={`/works/${item.id}/`}>
+            <Pressable>
+              <View className="flex-row bg-shade-1">
+                <View className="flex-1 justify-start">
+                  <Text className="text-2xl font-semibold bg-shade-2 pl-4 py-2">
+                    {item.title}
                   </Text>
-                ) : null}
+                  <View className="my-2 mx-2">
+                    <Text className="italic pl-4">{item.date_text}</Text>
+                    {item.creators.length ? (
+                      <Text className="italic pl-4">
+                        {item.creators[0].description}
+                      </Text>
+                    ) : null}
+                  </View>
+                </View>
+                <View className="py-2 px-4 bg-shade-2 justify-center">
+                  <Image
+                    className="h-28 w-28"
+                    source={{ uri: item.images.web.url }}
+                    contentFit="contain"
+                    transition={500}
+                  />
+                </View>
               </View>
-            </View>
-            <View className="py-2 px-4 bg-shade-2 justify-center">
-              <Image
-                className="h-28 w-28"
-                source={{ uri: item.images.web.url }}
-                contentFit="contain"
-                transition={500}
-              />
-            </View>
-          </View>
+            </Pressable>
+          </Link>
         )}
         ItemSeparatorComponent={() => <View className="h-1 bg-shade-0" />}
       />
