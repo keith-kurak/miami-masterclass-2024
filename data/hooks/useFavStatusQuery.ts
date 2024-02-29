@@ -9,7 +9,8 @@ export const useFavStatusQuery = function(id: string) {
   const query = useQuery({
     queryKey: [`works:fav:${id}`],
     queryFn: async () => {
-      return false
+      const response = await fetch(`/works/${id}/fav`);
+      return await response.json();
     },
   });
 
