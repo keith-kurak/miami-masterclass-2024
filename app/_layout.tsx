@@ -72,7 +72,6 @@ function RootLayoutNav() {
           }}
         >
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="visit" options={{ presentation: "modal" }} />
         </Stack>
       </View>
     </QueryClientProvider>

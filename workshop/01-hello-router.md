@@ -35,9 +35,9 @@ Press `i` or `a` in the terminal window and the Expo CLI will install Expo Go on
 #### On the web
 Press `w` and the app will open in your web browser. Currently this app gets kind of, uh, wide on your browser, so open Chrome DevTools to the right to shrink that down to mobile size.
 
-## Exercise 2: Add the "Visitors info" modal
+## Exercise 2: Add the "Visitors info" screen
 <img src="./assets/01/add-modal.gif" alt="animated" width="200"/>
-Let's add a screen- a simple static route that opens a modal with info about visiting the museum. There's already a button in the navbar. We just need to add the screen.
+Let's add a screen- a simple static route that opens a screen with info about visiting the museum. There's already a button in the navbar. We just need to add the screen.
 
 ### What happens you navigate to a route that doesn't exist?
 **Try out the button in the navbar.** What happens?
@@ -63,7 +63,7 @@ Fix the route:
 
 ```diff _layout.tsx
 headerRight: () => (
--  <Link href="/modal" asChild>
+-  <Link href="/welcome" asChild>
 +  <Link href="/visit" asChild>
     <Pressable>
 ```
