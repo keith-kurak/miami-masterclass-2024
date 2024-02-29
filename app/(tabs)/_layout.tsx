@@ -39,7 +39,7 @@ export default function TabLayout() {
             <TabBarIcon type="MaterialIcons" name="museum" color={color} />
           ),
           headerRight: () => (
-            <Link href="/welcome" asChild>
+            <Link href="/visit" asChild>
               <Pressable>
                 {({ pressed }) => (
                   <FontAwesome
@@ -51,6 +51,15 @@ export default function TabLayout() {
                 )}
               </Pressable>
             </Link>
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="two"
+        options={{
+          title: "Favorites",
+          tabBarIcon: ({ color }) => (
+            <TabBarIcon type="FontAwesome" name="star" color={color} />
           ),
         }}
       />
