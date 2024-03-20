@@ -18,7 +18,7 @@ Add a dynamic route structure to enable navigating to a specific work of art.
 ## Exercise 1: Intro to dynamic routes
 Dynamic routes let you put a variable into your URL, that you can then query on the destination screen. They are defined with square brackets, e.g., `[id]`.
 
-There's already a dynamic route in the app: `/departments/[department]`. When you navigate to that route, the URL will contain the actual department, e.g., `/departments/North%20American%20Art`.
+There's already a dynamic route in the app: `/departments/[department]`. When you navigate to that route, the URL will contain the actual department, e.g., `/departments/Textiles`.
 
 <!-- TODO: maybe make these URL's prettier with slugification, etc -->
 
@@ -30,6 +30,16 @@ const { department }: { department: string } = useLocalSearchParams();
 Then it can use `department` in a query to get all works for that department.
 
 **Try it**: It's easier to see the URL's in your web browser. Press `w` to open the app in your browser, and navigate to a department. Notice the URL. You can check out what `useWorksForDepartmentQuery` in the departments index screen is doing to see what happens to that `department` value in the URL.
+
+**Try it (mobile edition)**: These same links work on your phone. Type the following into your phone web browser:
+
+```
+exp://[your computer's ip address]:8081/--/departments/Textiles
+```
+
+It should open up in your app (inside of Expo Go).
+
+`exp` is the "scheme" that Expo Go registered with your mobile OS. iOS or Android knows to open your app when it sees that instead of `https://`. If you build a "standalone" version of this app, the scheme will match what is in **app.json**, and you will not need the IP address. The same deep link would be `artthing://departments/Textiles`.
 
 ## Exercise 2. Add the `/works/[id]` route
 Let's add a dynamic route just like departments, except for individual works of art. The url will be `/works/[id]`. where ID is the unique identifier for the work of art. This will enable users to navigate to the details about a work of art from anywhere in the app.
@@ -63,9 +73,13 @@ renderItem={({ item }) => (
 
 By default `Link` components make text linkable, but you can use `asChild` to make anything linkable.ß
 
-## BONUS: Test out in-app deep linking
+## BONUS: Test out your new link in the app
 
-TODO
+Try another link in your phone web browser:
+
+```
+exp://[your computer's ip address]:8081/--/works/128056
+```
 
 ## See the solution
 Switch to branch: `02-dynamic-routes-solution`
