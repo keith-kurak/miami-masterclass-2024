@@ -12,12 +12,8 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "ios": {
-      "supportsTablet": true
-    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {},
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
@@ -35,7 +31,7 @@
         {
           "origin": "https://artthing2.dev/"
         }
-      ],
+      ]
     ],
     "experiments": {
       "typedRoutes": true
