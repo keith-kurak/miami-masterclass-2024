@@ -16,16 +16,15 @@ Bring your laptop! You will write code with it. If you regularly do JavaScript d
 ### Install Expo prerequisites
 1. [Node.js LTS release](https://nodejs.org/en/) (version 18 or higher)
 2. [Git](https://git-scm.com/). The [Github Desktop app](https://desktop.github.com/) installs this for you- that's what I use.
-3. Highly recommended: [Visual Studio Code](https://code.visualstudio.com/download). Any text editor will do, but my examples will be in VS Code.
-### Download Expo Go (highly-recommended)
-7. Download the "Expo Go" app on your phone from the App Store or Play Store.
-### Clone/fork the demo project and restore dependencies (recommended!)
-*It's a good idea to restore dependencies in case the network goes wonky during the session! Fork AND clone the repo if you'd like to push anything you do to Github. Just cloning it is fine, too, if you just want to keep everything local.
+3. Recommended: [Visual Studio Code](https://code.visualstudio.com/download). 
+### Download Expo Go (not required, but highly-recommended)
+4. Download the "Expo Go" app on your phone from the App Store or Play Store.
+### Fork the demo project and restore dependencies
+> You can also just clone in case you don't want to push your work to Github
 
-9. Click "Fork" at the top of this page to fork the repo.
-10. Clone your fork (easy way: click the green "Code" button, then "Open in Github Desktop").
-11. `cd` to the folder and run `npm install`.
-12. Run `npx expo login` and login with your Expo account.
+5. Click "Fork" at the top of this page to fork the repo.
+6. Clone your fork (easy way: click the green "Code" button, then "Open in Github Desktop").
+7. `cd` to the folder and run `npm install`.
 
 ## Considerations for specific setups
 - Beyond installing tools like Node and Git, you should not need admin access on your machine.

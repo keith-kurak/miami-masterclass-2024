@@ -1,26 +1,15 @@
 import React from "react";
 import FontAwesome from "@expo/vector-icons/FontAwesome";
-import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 import { Link, Tabs } from "expo-router";
 import { Pressable } from "react-native";
 import { useClientOnlyValue } from "@/components/useClientOnlyValue";
 import customColors from "@/constants/colors";
-
-// You can explore the built-in icon families and icons on the web at https://icons.expo.fyi/
-function TabBarIcon(props: {
-  name:
-    | React.ComponentProps<typeof FontAwesome>["name"]
-    | React.ComponentProps<typeof MaterialIcons>["name"];
-  type?: "FontAwesome" | "MaterialIcons";
-  color: string;
-}) {
-  const IconComponent =
-    props.type === "MaterialIcons" ? MaterialIcons : FontAwesome;
-  // @ts-ignore
-  return <IconComponent size={28} style={{ marginBottom: -3 }} {...props} />;
-}
+import { useMediaQuery } from '@/constants/useMediaQuery';
+import { TabBarIcon } from '@/components/TabBarIcon';
 
 export default function TabLayout() {
+  const { isLarge } = useMediaQuery();
+
   return (
     <Tabs
       screenOptions={{
@@ -28,6 +17,9 @@ export default function TabLayout() {
         // to prevent a hydration error in React Navigation v6.
         headerShown: useClientOnlyValue(false, true),
         lazy: false,
+        tabBarStyle: {
+          display: isLarge ? "none" : "flex",
+        },
       }}
     >
       <Tabs.Screen
@@ -39,7 +31,7 @@ export default function TabLayout() {
             <TabBarIcon type="MaterialIcons" name="museum" color={color} />
           ),
           headerRight: () => (
-            <Link href="/visit" asChild>
+            <Link className="sm:hidden" href="/visit" asChild>
               <Pressable>
                 {({ pressed }) => (
                   <FontAwesome
