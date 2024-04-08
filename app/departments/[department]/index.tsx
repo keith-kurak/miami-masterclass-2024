@@ -5,7 +5,7 @@ import { useWorksForDepartmentQuery } from "@/data/hooks/useWorksForDepartmentQu
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { LoadingShade } from "@/components/LoadingShade";
 
-export default function TabOneScreen() {
+export default function DepartmentScreen() {
   const { department }: { department: string } = useLocalSearchParams();
 
   const query = useWorksForDepartmentQuery(department);

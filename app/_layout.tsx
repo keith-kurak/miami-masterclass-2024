@@ -1,12 +1,13 @@
 import FontAwesome from "@expo/vector-icons/FontAwesome";
 import { useFonts } from "expo-font";
-import { Stack } from "expo-router";
+import { Stack, Link } from "expo-router";
 import { Image } from "expo-image";
 import * as SplashScreen from "expo-splash-screen";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { useEffect } from "react";
-import { View, FlatList, ScrollView } from "react-native";
+import { View, FlatList, ScrollView, Pressable } from "react-native";
 import { cssInterop, remapProps } from "nativewind";
+import { TabBarIcon } from "@/components/TabBarIcon";
 import "../global.css";
 
 // component interops for nativewind - just need these once
@@ -21,7 +22,6 @@ remapProps(ScrollView, {
   className: "style",
   contentContainerClassName: "contentContainerStyle",
 });
-
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -65,15 +65,40 @@ function RootLayoutNav() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <View style={{ flex: 1 }}>
+      <View className="flex-1 sm:w-7/12 sm:self-center">
+        <WideScreenTabBar />
         <Stack
           screenOptions={{
             headerBackTitleVisible: false,
           }}
         >
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen name="visit" options={{ presentation: "modal" }} />
         </Stack>
+        <View className="max-sm:hidden h-8" />
       </View>
     </QueryClientProvider>
   );
 }
+
+const WideScreenTabBar = () => {
+  return (
+    <View className="max-sm:hidden py-4 flex-row gap-x-4 justify-end">
+      <Link href="/(tabs)" asChild>
+        <Pressable>
+          <TabBarIcon type="MaterialIcons" name="museum" />
+        </Pressable>
+      </Link>
+      <Link href="/(tabs)/two" asChild>
+        <Pressable>
+          <TabBarIcon type="FontAwesome" name="star" />
+        </Pressable>
+      </Link>
+      <Link href="/visit" asChild>
+        <Pressable>
+          <TabBarIcon type="FontAwesome" name="info-circle" />
+        </Pressable>
+      </Link>
+    </View>
+  );
+};
