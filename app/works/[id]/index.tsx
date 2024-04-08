@@ -15,7 +15,7 @@ import colors from "@/constants/colors";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { LoadingShade } from "@/components/LoadingShade";
 
-export default function TabOneScreen() {
+export default function WorkScreen() {
   const dimensions = useWindowDimensions();
 
   const insets = useSafeAreaInsets();
@@ -49,7 +49,7 @@ export default function TabOneScreen() {
         <View className="py-4 px-4 bg-shade-2">
           <Image
             style={{
-              height: dimensions.width,
+              height: dimensions.width > 640 ? 640 : dimensions.width,
             }}
             source={{ uri: work && work.images.web.url }}
             contentFit="contain"
@@ -86,7 +86,9 @@ export default function TabOneScreen() {
           </View>
           {work?.description && (
             <>
-              <Text className="text-xl font-semibold px-4 py-2 bg-shade-2">Description</Text>
+              <Text className="text-xl font-semibold px-4 py-2 bg-shade-2">
+                Description
+              </Text>
               <View className="px-4 gap-y-2 py-2">
                 <Text className="text-l">{stripTags(work.description)}</Text>
               </View>
@@ -98,7 +100,7 @@ export default function TabOneScreen() {
                 Did you know?
               </Text>
               <View className="px-4 gap-y-2 py-2">
-                <Text className="text-l">{work.did_you_know}</Text>
+                <Text className="text-l">{stripTags(work.did_you_know)}</Text>
               </View>
             </>
           )}
