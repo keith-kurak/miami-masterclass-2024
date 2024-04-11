@@ -25,7 +25,7 @@ RUN apt-get update -qq && \
 # Force NODE_ENV to development to install devDependencies, bringing in Express, etc.
 RUN NODE_ENV=development npm ci
 
-# RUN npx expo export -p web
+RUN npx expo export -p web
 
 # Start the server by default, this can be overwritten at runtime
 EXPOSE 3000
