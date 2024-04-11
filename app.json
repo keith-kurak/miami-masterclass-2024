@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "art-thing-2",
-    "slug": "art-thing-2",
+    "name": "miami-masterclass-2024",
+    "slug": "miami-masterclass-2024",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -12,13 +12,18 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": ["**/*"],
-    "ios": {},
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "bundleIdentifier": "com.keithkurak.miamimasterclass2024"
+    },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.keithkurak.miamimasterclass2024"
     },
     "web": {
       "bundler": "metro",
@@ -29,12 +34,17 @@
       [
         "expo-router",
         {
-          "origin": "https://artthing2.dev/"
+          "origin": "https://miami-masterclass-2024.fly.dev/"
         }
       ]
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "59f54a6f-477e-4bad-8c81-1786bfdd719e"
+      }
     }
   }
 }

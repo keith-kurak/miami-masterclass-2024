@@ -19,7 +19,7 @@ export default function TabOneScreen() {
         keyExtractor={(item) => item.department}
         renderItem={({ item }) => (
           <Link asChild href={`/departments/${item.department}/`}>
-            <Pressable className="flex-1">
+            <Pressable className="sm:flex-1">
               <Image
                 className="h-24 w-full sm:h-56"
                 source={{
