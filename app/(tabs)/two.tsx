@@ -16,7 +16,7 @@ export default function TabTwoScreen() {
         renderItem={({ item }) => (
           <View style={styles.imageContainerStyle}>
             <Link asChild href={`/works/${item.id}/`}>
-            <Pressable className="flex-1">
+            <Pressable className="sm:flex-1">
               <Image
                 className="h-32 w-full sm:h-72"
                 source={{
@@ -51,10 +51,6 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "column",
     margin: 1,
-  },
-  imageStyle: {
-    height: 120,
-    width: "100%",
   },
   fullImageStyle: {
     justifyContent: "center",

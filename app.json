@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "art-thing-2",
-    "slug": "art-thing-2",
+    "name": "miami-masterclass-2024",
+    "slug": "miami-masterclass-2024",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -29,7 +29,7 @@
       [
         "expo-router",
         {
-          "origin": "https://artthing2.dev/"
+          "origin": "https://miami-masterclass-2024.dev/"
         }
       ]
     ],
