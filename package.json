@@ -8,7 +8,8 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "deploy-web": "npx expo export -p web && flyctl deploy"
   },
   "jest": {
     "preset": "jest-expo"
