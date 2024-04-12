@@ -34,7 +34,7 @@
       [
         "expo-router",
         {
-          "origin": "https://miami-masterclass-2024.fly.dev/"
+          "origin": "https://miami-masterclass-2024.dev/"
         }
       ]
     ],

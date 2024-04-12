@@ -31,7 +31,7 @@ export default function TabLayout() {
             <TabBarIcon type="MaterialIcons" name="museum" color={color} />
           ),
           headerRight: () => (
-            <Link className="sm:hidden" href="/visit" asChild>
+            <Link className="sm:hidden" href="/welcome" asChild>
               <Pressable>
                 {({ pressed }) => (
                   <FontAwesome
