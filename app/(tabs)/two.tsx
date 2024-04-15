@@ -16,14 +16,14 @@ export default function TabTwoScreen() {
         renderItem={({ item }) => (
           <View style={styles.imageContainerStyle}>
             <Link asChild href={`/works/${item.id}/`}>
-            <Pressable className="sm:flex-1">
-              <Image
-                className="h-32 w-full sm:h-72"
-                source={{
-                  uri: item.image,
-                }}
-              />
-            </Pressable>
+              <Pressable className="flex-1">
+                <Image
+                  className="h-32 w-full sm:h-72"
+                  source={{
+                    uri: item.image,
+                  }}
+                />
+              </Pressable>
             </Link>
           </View>
         )}
