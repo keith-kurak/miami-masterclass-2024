@@ -114,7 +114,7 @@ mutationFn: async (favStatus: { id: string; status: boolean }) => {
 
 ## Exercise 3. Oh, look what happened to the Favorites tab!
 
-(TODO: add picture)
+<img src="./assets/03/favorites.png" alt="favorites" width="300"/>
 
 Now that we're writing favorite status to the API, the Favorites tab, which already has its own API route to read all favorited artwork, should come alive. Try setting several works as a favorite and then navigate back to the Favorites tab to see them show up.
 
@@ -122,3 +122,6 @@ Go ahead and check out the API route calls in **app/(tabs)/two.tsx** to see how 
 
 ## See the solution
 Switch to branch: `03-api-routes-solution`
+
+## Bonus exercise?
+[Learn about deploying the app](bonus-deploy.md)
