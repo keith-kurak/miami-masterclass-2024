@@ -4,7 +4,6 @@
 Run the app and start exploring file-based routing by adding a few routes of your own.
 
 ### Concepts
-- Running an Expo dev environment
 - Adding routes in Expo Router
 - Navigating to routes in Expo Router
 - How layout files can customize the behavior of routes
@@ -15,27 +14,8 @@ Run the app and start exploring file-based routing by adding a few routes of you
 - Add a second tab, "Favorites" and customize the icon
 
 # Exercises
-## Exercise 1: Run the app
 
-> If you've cloned and restored dependencies already, nice job! Skip straight to d).
-
-### Start the local dev environment
-1. Clone this repo so you can work on it locally. (Fork if you'd like to push your version back up to Github).
-2. Run `npm install` to restore dependencies.
-3. Run `npx expo start` to start the bundler.
-
-At this point, you can run the app one of a few ways (you can use these at the same time)...
-
-#### On your phone:
-If you have Expo Go installed on your phone and both your phone and laptop are connected to the same wifi, scan the QR code on the terminal with your camera app.
-
-#### On an emulator/simulator
-Press `i` or `a` in the terminal window and the Expo CLI will install Expo Go on your iOS simulator or Android emulator (if available), and then run the app.
-
-#### On the web
-Press `w` and the app will open in your web browser. Currently this app gets kind of, uh, wide on your browser, so open Chrome DevTools to the right to shrink that down to mobile size.
-
-## Exercise 2: Add the "Visitors info" screen
+## Exercise 1: Add the "Visitors info" screen
 <img src="./assets/01/add-modal.gif" alt="animated" width="200"/>
 Let's add a screen- a simple static route that opens a screen with info about visiting the museum. There's already a button in the navbar. We just need to add the screen.
 
@@ -70,7 +50,7 @@ headerRight: () => (
 
  **Try it**: Try the button. It should open the modal now.
 
-## Exercise 3: Add the "Favorites" tab.
+## Exercise 2: Add the "Favorites" tab.
 It'll be pretty empty for now, but let's add a second tab that will eventually fill up with our "favorite" artwork, the stuff we want to see when we visit the museum.
 
 Tabs aren't like your typical routes. Instead of pushing screens on top of each other with links (the default "stack" arrangement), they arrange themselves in a group where each tab can be accessed via a button in a bar. How does Expo Router know to arrange screens as tabs instead of a stack?
@@ -80,6 +60,8 @@ Two concepts make this happen:
 - **layout files**: Each folder/group can have a **_layout.tsx** file. This is not its own route, but it is executed whenever the user navigates to a route inside the folder. It can define special rules about how to display the screens in the folder, code to execute prior to displaying the screen, etc.
 
 In **app/(tabs)/_layout.tsx**, a tabs layout is defined and returned. This means that all the screens inside **(tabs)** will appear as tabs in the tab bar.
+
+**Already see the tab?** If you're on the desktop web version, you might already see a favorites icon in the top left. I hastily-added a responsive layout that bypasses the tab bar. Shrink your window horizontally until you don't see that anymore, and this'll make more sense.
 
 ### Adding the tab
 1. The new tab is premade for you in the **new-screens** folder. Copy **new-screens/(tabs)/two.tsx** to **app/(tabs)**.
@@ -109,3 +91,6 @@ Update **app/(tabs)/_layout.tsx** to define properties for the new tab:
 
 ## See the solution
 Switch to branch: `01-hello-router-solution`
+
+## Next exercise
+[Exercise 2](02-dynamic-routes.md)
