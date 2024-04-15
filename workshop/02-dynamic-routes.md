@@ -46,7 +46,7 @@ Let's add a dynamic route just like departments, except for individual works of 
 
 1. Create a `works` folder under `app`, and an `[id]` folder under `works`. Your folder structure should look like this:
 
-(TODO: add screenshot)
+<img src="./assets/02/folders.png" alt="folders" width="200"/>
 
 2. The new screen is premade for you in the **/new-screens** folder. Copy **new-screens/works/[id]/index.tsx** to **app/works/[id]/**.
 
