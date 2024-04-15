@@ -3,7 +3,9 @@ Workshop exercises for Web, Mobile, and API, All Together: Universal Full Stack 
 
 ## How to do the workshop
 ### 1. Clone it
-`git clone https://github.com/keith-kurak/miami-masterclass-2024` or open with Github Desktop.
+`git clone https://github.com/keith-kurak/miami-masterclass-2024`
+
+or open with Github Desktop.
 
 ### 2. Restore dependencies
 Run `npm install`.
