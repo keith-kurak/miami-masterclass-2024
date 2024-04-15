@@ -83,3 +83,6 @@ exp://[your computer's ip address]:8081/--/works/128056
 
 ## See the solution
 Switch to branch: `02-dynamic-routes-solution`
+
+## Next exercise
+[Exercise 3](03-api-routes.md)

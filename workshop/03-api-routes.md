@@ -122,3 +122,6 @@ Go ahead and check out the API route calls in **app/(tabs)/two.tsx** to see how 
 
 ## See the solution
 Switch to branch: `03-api-routes-solution`
+
+## Bonus exercise?
+[Learn about deploying the app](bonus-deploy.md)
