@@ -89,6 +89,7 @@ Update **app/(tabs)/_layout.tsx** to define properties for the new tab:
 
 <details>
   <summary>Expand to just get just the added code for easy copying</summary>
+
   ```tsx
   <Tabs.Screen
    name="two"
@@ -100,6 +101,7 @@ Update **app/(tabs)/_layout.tsx** to define properties for the new tab:
    }}
   />
   ```
+
 </details>
 
 **Try it**: Your tab should be called "Favorites" and should have a star icon now.
