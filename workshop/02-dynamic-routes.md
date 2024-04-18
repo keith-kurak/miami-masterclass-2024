@@ -31,7 +31,7 @@ Then it can use `department` in a query to get all works for that department.
 
 **Try it**: It's easier to see the URL's in your web browser. Press `w` to open the app in your browser, and navigate to a department. Notice the URL. You can check out what `useWorksForDepartmentQuery` in the departments index screen is doing to see what happens to that `department` value in the URL.
 
-**Try it (mobile edition)**: These same links work on your phone. Type the following into your phone web browser:
+**Try it (mobile edition)**: These same links work on your phone. If you're running the app on your pohone, copy the following into your phone web browser:
 
 ```
 exp://[your computer's ip address]:8081/--/departments/Textiles
@@ -39,7 +39,7 @@ exp://[your computer's ip address]:8081/--/departments/Textiles
 
 It should open up in your app (inside of Expo Go).
 
-`exp` is the "scheme" that Expo Go registered with your mobile OS. iOS or Android knows to open your app when it sees that instead of `https://`. If you build a "standalone" version of this app, the scheme will match what is in **app.json**, and you will not need the IP address. The same deep link would be `artthing://departments/Textiles`.
+`exp` is the "scheme" that Expo Go registered with your mobile OS. iOS or Android knows to open your app when it sees that instead of `https://`. If you build a "standalone" version of this app, the scheme will match what is in **app.json**, and you will not need the IP address. The same deep link would be `miamimasterclass://departments/Textiles`.
 
 ## Exercise 2. Add the `/works/[id]` route
 Let's add a dynamic route just like departments, except for individual works of art. The url will be `/works/[id]`. where ID is the unique identifier for the work of art. This will enable users to navigate to the details about a work of art from anywhere in the app.
