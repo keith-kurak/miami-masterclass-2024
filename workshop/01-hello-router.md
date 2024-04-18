@@ -87,6 +87,23 @@ Update **app/(tabs)/_layout.tsx** to define properties for the new tab:
 </Tabs>
 ```
 
+<details>
+  <summary>Expand to just get just the added code for easy copying</summary>
+
+  ```tsx
+  <Tabs.Screen
+   name="two"
+   options={{
+    title: "Favorites",
+     tabBarIcon: ({ color }) => (
+      <TabBarIcon type="FontAwesome" name="star" color={color} />
+    ),
+   }}
+  />
+  ```
+
+</details>
+
 **Try it**: Your tab should be called "Favorites" and should have a star icon now.
 
 ## See the solution
