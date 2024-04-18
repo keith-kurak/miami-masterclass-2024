@@ -44,7 +44,11 @@ export async function GET(request: ExpoRequest) {
 ```
 (don't sweat what the "database" is right now, the key lesson here is reading the request, doing something withit, and returning a response)
 
-**Try it**: Go to `http://localhost:8081/works/92937/fav` in your browser. We can't write any favorites status yet, so you should get false. But... you should get something!
+**Try it**: Go to
+```
+http://localhost:8081/works/92937/fav
+```
+in your browser. We can't write any favorites status yet, so you should get false. But... you should get something!
 
 ### Add the POST request
 
@@ -91,6 +95,16 @@ queryFn: async () => {
 },
 ```
 
+<details>
+  <summary>Expand to just get just the added code for easy copying</summary>
+
+  ```tsx
+const response = await fetch(`/works/${id}/fav`);
+return await response.json();
+  ```
+
+</details>
+
 Let's do the same with **useFavStatusMutation.ts**, implementing the POST:
 
 ```diff
@@ -109,6 +123,24 @@ mutationFn: async (favStatus: { id: string; status: boolean }) => {
 +  return await response.json();
 },
 ```
+
+<details>
+  <summary>Expand to just get just the added code for easy copying</summary>
+
+  ```tsx
+  const response = await fetch(`/works/${id}/fav`, {
+    method: "POST",
+    headers: {
+     Accept: "application.json",
+     "Content-Type": "application/json",
+   },
+   cache: "default",
+   body: JSON.stringify({ status }),
+ });
+ return await response.json();
+  ```
+
+</details>
 
 **Try it:** Navigate to a work and try to favorite it. Try to unfavorite it. You should see that heart fill and unfill
 
