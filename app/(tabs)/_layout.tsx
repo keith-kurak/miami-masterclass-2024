@@ -4,8 +4,8 @@ import { Link, Tabs } from "expo-router";
 import { Pressable } from "react-native";
 import { useClientOnlyValue } from "@/components/useClientOnlyValue";
 import customColors from "@/constants/colors";
-import { useMediaQuery } from '@/constants/useMediaQuery';
-import { TabBarIcon } from '@/components/TabBarIcon';
+import { useMediaQuery } from "@/constants/useMediaQuery";
+import { TabBarIcon } from "@/components/TabBarIcon";
 
 export default function TabLayout() {
   const { isLarge } = useMediaQuery();
@@ -31,9 +31,9 @@ export default function TabLayout() {
             <TabBarIcon type="MaterialIcons" name="museum" color={color} />
           ),
           headerRight: () => (
-            <Link className="sm:hidden" href="/welcome" asChild>
+            <Link className="sm:hidden" href="/visit" asChild>
               <Pressable>
-                {({ pressed }) => (
+                {({ pressed }: { pressed: boolean }) => (
                   <FontAwesome
                     name="info-circle"
                     size={25}

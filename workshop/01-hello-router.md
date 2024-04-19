@@ -32,24 +32,6 @@ The URL for the Visit screen will be `/visit`, so we need to add a file called *
 1. The new screen is premade for you in the **new-screens** folder. Copy **visit.tsx** to **app**.
 2. **Try it**: Press the button in the navbar. Does the screen appear?
 
-...no? Let's fix that.
-
-### Fix the broken link
-We'll learn more about layout files in a moment, but, since that button is in the navigation bar, it's defined in `**/app/(tabs)/_layout.tsx**.
-
-If you go in there, you'll see a `Link` component defined for the right header of the first tab, but the `href` doesn't match the `/visit` route we're creating. In VS Code, you should see some red squiggles indicating that the URL doesn't match a route, thanks to [typed routes](https://docs.expo.dev/router/reference/typed-routes/).
-
-Fix the route:
-
-```diff _layout.tsx
-headerRight: () => (
--  <Link href="/welcome" asChild>
-+  <Link href="/visit" asChild>
-    <Pressable>
-```
-
- **Try it**: Try the button. It should open the modal now.
-
 ## Exercise 2: Add the "Favorites" tab.
 It'll be pretty empty for now, but let's add a second tab that will eventually fill up with our "favorite" artwork, the stuff we want to see when we visit the museum.
 
