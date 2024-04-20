@@ -10,10 +10,16 @@ git clone https://github.com/keith-kurak/miami-masterclass-2024
 or open with Github Desktop.
 
 ### 2. Restore dependencies
-Run `npm install`.
+Run 
+```
+npm install
+```
 
 ### 3. Run it
-Run `npx expo start`.
+Run 
+```
+npx expo start
+```
 
 #### To run on web
 Press `w`.
