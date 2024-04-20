@@ -45,3 +45,8 @@ Not really. This should work if you have a supported Node environment (e.g., 18 
 - Expo instructions for Windows 11 (PowerShell and WSL-compatible): https://docs.expo.dev/get-started/installation/#windows-terminal-support
 ### Still not working?
 One helpful thing to try out is to create a blank Expo app and see if it works. Run `npx create-expo-app` and try to run it with the instructions above. If that doesn't work, there's quite likely something up with your local dev environment.
+
+## Connect
+- [Twitter](https://twitter.com/home)
+- [Linked In)(https://www.linkedin.com/in/keith-kurak/)
+- [Expo Discord](https://chat.expo.dev)
