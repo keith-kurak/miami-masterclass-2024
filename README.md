@@ -48,5 +48,5 @@ One helpful thing to try out is to create a blank Expo app and see if it works. 
 
 ## Connect
 - [Twitter](https://twitter.com/home)
-- [Linked In)(https://www.linkedin.com/in/keith-kurak/)
+- [Linked In](https://www.linkedin.com/in/keith-kurak/)
 - [Expo Discord](https://chat.expo.dev)
