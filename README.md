@@ -29,6 +29,8 @@ Then do:
 - [Exercise 3](/workshop/03-api-routes.md)
 
 ## Etc.
+### Slides!
+[Slides](https://docs.google.com/presentation/d/1Me8xcTt5A9dyZF3l8HSx6bhbyB0AAcODimGRS8T-l4Y/edit?usp=sharing)
 ### Prerequisites?
 Not really. This should work if you have a supported Node environment (e.g., 18 or 20). [There's more details about setting up Expo here](https://docs.expo.dev/get-started/installation/).
 ### Tips for Windows
